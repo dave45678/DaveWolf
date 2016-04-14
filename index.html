@@ -39,10 +39,11 @@ function httpGetAsync(theUrl, callback)
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.onreadystatechange = function() { 
 		if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-			callback(xmlHttp.responseText);
+          //callback(xmlHttp.responseText);
+          callback("test hello");
 	}
      xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-    xmlHttp.send("something");
+     xmlHttp.send(null);
 }
 Element.prototype.remove = function() {
     this.parentElement.removeChild(this);
