@@ -40,7 +40,8 @@ function httpGetAsync(theUrl, callback)
 	xmlHttp.onreadystatechange = function() { 
 		if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
           //this sends the entire text back to the response
-          callback(xmlHttp.responseText);
+          //callback(xmlHttp.responseText);
+          document.getElementById("resume").innerHTML=xmlHttp.responseText; 
 	}
      xmlHttp.open("GET", theUrl, true); // true for asynchronous 
      xmlHttp.send(null);
@@ -80,6 +81,6 @@ httpGetAsync(URL,
   <p>...</p>
   <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 </div>
-
+  <div id="resume"></div>
 
 </body>
