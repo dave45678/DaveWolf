@@ -42,7 +42,7 @@ function httpGetAsync(theUrl, callback)
 			callback(xmlHttp.responseText);
 	}
      xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-    //xmlHttp.send(null);
+    xmlHttp.send("something");
 }
 Element.prototype.remove = function() {
     this.parentElement.removeChild(this);
