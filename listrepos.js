@@ -3,7 +3,7 @@ jQuery.githubUser = function(username, callback) {
 }
  
 jQuery.fn.loadRepositories = function(username) {
-    this.html("<span>Querying GitHub for " + username +"'s repositories...</span>");
+    this.innerhtml("<span>Querying GitHub for " + username +"'s repositories...</span>");
      
     var target = this;
     $.githubUser(username, function(data) {
