@@ -105,7 +105,8 @@ httpGetAsync(URL,
         <p class="lead"></p>
       </div>
     </div><!-- /.container -->
-
+    <div id="my-github-projects"/>
+  <p/>
     <div id="resume"></div>
 	
 
@@ -126,7 +127,8 @@ httpGetAsync(URL,
 <script src="/listrepos.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function() {
-        $("#my-github-projects").loadRepositories("dave45678");
+      //$("#my-github-projects").loadRepositories("dave45678");
+      document.getElementById("my-github-projects").innerHTML = loadRepositories("dave45678");
     });
 </script>
 <!-- end of scripts to list github projects
