@@ -41,7 +41,7 @@ function httpGetAsync(theUrl, callback)
 		if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
           //this sends the entire text back to the response
           //callback(xmlHttp.responseText);
-          document.getElementById("resume").innerHTML=xmlHttp.responseText; 
+          //document.getElementById("resume").innerHTML=xmlHttp.responseText; 
           $("#my-github-projects").loadRepositories("dave45678");
 	}
      xmlHttp.open("GET", theUrl, true); // true for asynchronous 
