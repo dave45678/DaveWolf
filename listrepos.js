@@ -3,7 +3,7 @@ jQuery.githubUser = function(username, callback) {
 }
  
 jQuery.fn.loadRepositories = function(username) {
-    //this.html("<span>Querying GitHub for " + username +"'s repositories...</span>");
+    this.html("<span>Querying GitHub for " + username +"'s repositories...</span>");
      
     var target = this;
     $.githubUser(username, function(data) {
@@ -13,10 +13,12 @@ jQuery.fn.loadRepositories = function(username) {
         var list = $('<dl/>');
         target.empty().append(list);
         $(repos).each(function() {
-            if (this.name != (username.toLowerCase()+'.github.com')) {
-                list.append('<dt><a href="'+ (this.homepage?this.homepage:this.html_url) +'">' + this.name + '</a> <em>'+(this.language?('('+this.language+')'):'')+'</em></dt>');
-                list.append('<dd>' + this.description +'</dd>');
-            }
+        	if ((this.description).length>0){
+	            if (this.name != (username.toLowerCase()+'.github.com')) {
+	                list.append('<dt><a href="'+ (this.homepage?this.homepage:this.html_url) +'">' + this.name + '</a> <em>'+(this.language?('('+this.language+')'):'')+'</em></dt>');
+	                list.append('<dd>' + this.description +'</dd>');
+	            }
+        	}
         });      
       });
       
