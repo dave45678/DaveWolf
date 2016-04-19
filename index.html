@@ -59,8 +59,7 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
 }
 
 
-httpGetAsync(URL,
-	function(response) {
+httpGetAsync(URL,function(response) {
 		response = response.replace(/0025cf/g,'2022 \\00a0\\00a0 ')
 		response = response.replace(/0025cb/g,'25e6 \\00a0\\00a0 ')
 		document.body.innerHTML = '<div class="container">'+response+'</div>'
