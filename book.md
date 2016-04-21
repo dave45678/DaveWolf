@@ -1,6 +1,8 @@
 <!--
 https://api.github.com/users/dave45678/repos
 -->
+This tutorial is available at http://bit.ly/GitHubResume
+
 ###Use JavaScript to Dynamically Display your GitHub projects
 ####and host them for free on GitHub pages
 
