@@ -25,7 +25,7 @@ You can set gh-pages as the default branch in GitHub if you go to the project se
 All the work during this tutorial should be done under the **gh-pages** branch.
 
 ###Create a Readme.md file
-It's good practice to have a Readme file for every project. The Readme file  is a good place for a brief summary of your project. This tutorial will work without a readme file but the readme is your way of telling other GitHub users what your project is about.
+It's good practice to have a Readme file for every project. The Readme file  is a good place for a brief summary of your project. This tutorial will work without a readme file but the readme is your way of telling other GitHub users what your project is about. Six months from now the Readme file will tell *you* what the project is about.
 
 ###Working from the GitHub site
 You can complete this tutorial without additional software if you wish to work directly in the browser. Browse to Prose.io and allow Prose to access your GitHub repositories. Then select the GitHub Pages repository you created above. Prose is an IDE that allows you to edit code in a GitHub repository through the browser. You can also edit right through GitHub if you like.
@@ -74,7 +74,7 @@ Add the script tags for the JQuery library just below the closing head tag. Do n
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 ```
 
-Add the following code between script tags or as an external script. I saved mine in a file called listrepos.js which is in a directory I created called scripts.
+Add the following code between script tags or as an external script. I saved mine in a file called **listrepos.js** which is in a directory I created called **scripts**. If you create a file in GitHub from the website and save the name as **scripts/listrepos.js** then the file will be saved in that directory.
 
 
 ```javascript
@@ -111,11 +111,15 @@ jQuery.fn.loadRepositories = function(username) {
 };
 
 ```
-Next, add the code below to the index.html page. It should appear just before the closing tag for ```</head>```.
-
+If the above JavaScript code is in a separate file then add the code below to the index.html page. It should appear just before the closing tag for ```</head>```.
 
 ```html
 <script src="scripts/listrepos.js"></script>
+```
+
+The following code must also go in your index.html page. It will cause the repositories to load by calling the loadRespositories function in the JavaScript. This code can go pretty much anywhere. I put it just before the ending ```</head>`` tag in index.html.
+
+```html
 <script>
     $(function() {
         $("#my-github-projects").loadRepositories("dave45678");
@@ -129,26 +133,26 @@ Gravatar is a service for providing globally unique avatars. An avatar is a imag
 
 All URLs on Gravatar are based on the use of the hashed value of an email address. The hash identifies your identity within the system. Follow the following steps to ensure a consistent and accurate hash.
 1. Trim leading and trailing whitespace from an email address
-2. Force all characters to lower-case
+2. Make all characters lower-case
 3. Generate an MD5 hash of the cleaned-up email address
 
 We're going to use Gravatar to add an avatar to this page. If you don't have an account at Gravatar then visit their site (http://www.gravatar.com) and create one now. 
 
 To test your gravatar calculate the MD5 of your email address and browse to ```https://www.gravatar.com/HASH``` where HASH is your MD5 hash. You can use a site such as ```http://www.md5hashgenerator.com/``` to generate the hash.
 
-Once you calculate your hash add ```<img id="gravatar" src="http://gravatar.com/avatar/HASH?s=200" alt="YOUR_NAME"/> ``` to display your Gravatar image to the index.html page. Replace HASH and YOUR_NAME with the MD5 hash and your name.
+Once you calculate your hash add an image tag to the body of your page. It should look like this: ```<img id="gravatar" src="http://gravatar.com/avatar/HASH?s=200" alt="YOUR_NAME"/> ``` Replace HASH and YOUR_NAME with the MD5 hash and your name. The image tag will display your Gravatar image on index.html page. 
 
 
 ###Add Bootstrap
 Bootstrap is a free and open-source front-end library for creating websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. It aims to ease the development of dynamic websites and web applications.
 
-Bootstrap is a front end web framework, that is, an interface for the user, unlike the server-side code which resides on the "back end" or server.
+Bootstrap is a front end web framework, that is, an interface for the user. This is different than  server-side code like JSPs and servlets which reside on the server or "back end".
 
-Since version 2.0 it also supports responsive web design. This means the layout of web pages adjusts dynamically, taking into account the characteristics of the device used (desktop, tablet, mobile phone).
+Bootstrap also supports responsive web design. This means the layout of web pages adjusts dynamically when you are viewing your page on a tablet, phone or desktop.
 
 To make your page work with Bootstrap add the following code to your index.html page in the ```<head></head>``` section. *Bootstrap requires jQuery*. We added that link earlier so it isn't necessary to add it again.
 
-When we add links to external sites such as maxcdn.com shown below we are accessing their hosted version of Bootstrap and jQuery. It is also possible to save the linked code to your computer.
+When we add links to external sites such as maxcdn.com shown below we are accessing their hosted version of Bootstrap and jQuery. It is also possible to save the linked code to your computer. 
 
 ```html
 <!-- Bootstrap -->
@@ -227,7 +231,7 @@ Create a text file called ```CNAME``` in your GitHub pages site. It should conta
 Add additonal information about your career. This might include work history and contact infomation. You can even add more projects that you aren't in GitHub.
 
 ###Conclusion
-As you continue to add projects to GitHub they will show on your resume page. Your resume will always be up-to-date. In upcomping posts I'll show you how to get information from a Google spreadsheet and display it on your resume. And I'll show you how to use GitHub pages as a blog.
+As you continue to add projects to GitHub they will show on your resume page if you fill in the description. You could modify the code to change that feature of add others. This version of your resume will always be up-to-date. In upcomping posts I'll show you how to get information from a Google spreadsheet and display it on your resume. And I'll show you how to use GitHub pages as a free blog.
 
 
 Please let me know what else you would like to know about. You can reach me through my LinkedIn site or at ```dave45678@gmail.com```.
