@@ -14,17 +14,12 @@ GitHub Pages is a free offering from GitHub.com. It allows you to static host we
 **Technologies**: We will be creating this solution with GitHub, Prose, JavaScript, HTML, BootStrap, Gravatar. You will not need to install anything on your computer. Everything we use in this tutorial is free. You can also register a domain with  hover.com or another provider. Registering the domain is not free. You do not need to register a domain for this tutorial.  
 
 ####Organize your existing GitHub repositories
-This page will list repositories that have a description. If you have a repository you don't want included then don't fill in the description. This page will display the repository name, the programming language and the description.
+This page will list repositories that have a description. If you have a repository you don't want included then don't fill in the description. This page will display the repository name, the programming language and the description. The description is on the web page of the repository.
 
 ###Create a GitHub Pages repository
-Create a new GitHub repository named **username.github.io**, where username is your username on GitHub.  The first part of the repository must exactly match your username. 
+Create a new GitHub repository named **username.github.io**, where username is your username on GitHub.  The first part of the repository must exactly match your GitHub username. 
 
-###Create a branch for gh-pages
-You'll create your site on the branch called **gh-pages**. You can create that when set up your repository on GitHub.
-
-You can set gh-pages as the default branch in GitHub if you go to the project settings and change the default project to gh-pages.
-
-All the work during this tutorial should be done under the **gh-pages** branch.
+All the work during this tutorial should be done under the **master** branch.
 
 ###Create a Readme.md file
 It's good practice to have a Readme file for every project. The Readme file  is a good place for a brief summary of your project. This tutorial will work without a readme file but the readme is your way of telling other GitHub users what your project is about. Six months from now the Readme file will tell *you* what the project is about.
@@ -42,8 +37,7 @@ git config set-url origin https://dave45678@github.com/dave45678/DaveWolf
 
 **List of other git commands you need**
 ```
-git branch gh-pages
-git checkout gh-pages
+
 git add --all
 git commit -m "commit message"
 git pull
@@ -52,7 +46,7 @@ git status
 ```
 
 ###Create an index page 
-**Work on the gh-pages branch**. Create a web page called index.html.  A minimal HTML5 page is below. You can create this page locally or work directly from GitHub. 
+Create a web page called index.html.  A minimal HTML5 page is below. You can create this page locally or work directly from GitHub. 
 ```html
  <!DOCTYPE html>
 <html>
